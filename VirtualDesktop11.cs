@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly:AssemblyConfiguration("")]
 [assembly:AssemblyCompany("MS")]
 [assembly:AssemblyProduct("VirtualDesktop")]
-[assembly:AssemblyCopyright("© Markus Scholtes 2024")]
+[assembly:AssemblyCopyright("ï¿½ Markus Scholtes 2024")]
 [assembly:AssemblyTrademark("")]
 [assembly:AssemblyCulture("")]
 [assembly:AssemblyVersion("1.17.0.0")]
@@ -2183,7 +2183,7 @@ namespace VDeskTool
 									{ // check if parameter is greater than 0
 										try
 										{ // checking desktop for process handle
-											iParam = (int)System.Diagnostics.Process.GetProcessById(iParam).MainWindowHandle;
+											//iParam = (int)System.Diagnostics.Process.GetProcessById(iParam).MainWindowHandle;
 											// process handle converted to window handle
 											if (VirtualDesktop.Desktop.IsApplicationPinned((IntPtr)iParam))
 											{
@@ -2237,7 +2237,7 @@ namespace VDeskTool
 									{ // check if parameter is greater than 0
 										try
 										{ // seeking window for process handle
-											iParam = (int)System.Diagnostics.Process.GetProcessById(iParam).MainWindowHandle;
+											//iParam = (int)System.Diagnostics.Process.GetProcessById(iParam).MainWindowHandle;
 											// process handle converted to window handle and pin window
 											VirtualDesktop.Desktop.PinApplication((IntPtr)iParam);
 											if (verbose) Console.WriteLine("Application to process id " + groups[2].Value + " pinned to all desktops");
@@ -2276,7 +2276,7 @@ namespace VDeskTool
 									{ // check if parameter is greater than 0
 										try
 										{ // seeking window for process handle
-											iParam = (int)System.Diagnostics.Process.GetProcessById(iParam).MainWindowHandle;
+											//iParam = (int)System.Diagnostics.Process.GetProcessById(iParam).MainWindowHandle;
 											// process handle converted to window handle and unpin window
 											VirtualDesktop.Desktop.UnpinApplication((IntPtr)iParam);
 											if (verbose) Console.WriteLine("Application to process id " + groups[2].Value + " unpinned from all desktops");
